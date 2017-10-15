@@ -1,0 +1,507 @@
+@charset "UTF-8";
+/* CSS Document */
+/*reset basico*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	width:100%;
+	font-size: 16px;
+	font-family: 'Arial', Helvetica, sans-serif;
+	color: black;
+	background-color: white;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a:link    { color: white; }
+a:visited { color: white; }
+a:hover  { color: #999999; }
+
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; height:0px;}
+
+
+/*------------acaba reset-------------*/
+
+
+/*------------HEADER-----------------*/
+
+#header{
+	background-color: black;
+	width:100%;
+	overflow: hidden;
+}
+
+.logo{
+	width:12.5%;
+	float:left;
+	padding:32px 41px;
+	box-sizing: border-box;
+}
+.logo a{
+	font-size: 2.875em;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.nav {
+	float: left;
+    width: 75%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.nav-list li{
+	display: inline;	
+	padding: 0 12.5px;
+}
+
+.nav-list li a{
+	font-size: 1.25em;
+}
+
+a.fijo{
+	color: #999999;
+}
+
+.icons{
+	width: 12.5%;
+	float:right;
+}
+
+.icons-list li{
+	display:inline;
+}
+
+.icons-list img {
+	width: 18%;
+	padding: 36px 31px 0 0;
+}
+
+/*----------RESPONSIVE NAV-------------*/
+
+/* Display #nav-mobile and hide it */
+#nav-mobile{
+    display: none;
+    background: url(../img/menu.png) no-repeat center center;
+    float: right;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 40px;
+    top: 38px;
+    opacity: .6;
+}
+ 
+    /* add #nav-mobile id, when the menu is toggled */
+    #nav-mobile.nav-active{
+        opacity: 1;
+    }
+
+/*----------RESPONSIVE NAV-------------*/    
+
+/*------------HEADER-----------------*/
+
+/*------------BODY CONTENT-----------------*/
+
+#body-content{
+	width:75%;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-bottom: 118px;
+}
+
+/*----------BREAD CRUMB-------------*/
+
+ul.breadcrumb {
+    padding: 38px 0;
+    list-style: none;
+}
+
+ul.breadcrumb li {
+	display: inline;
+}
+
+ul.breadcrumb li+li:before {
+    color: #999999;
+    content:">";
+}
+ul.breadcrumb li a {
+	color: #999999;
+	font-size: 0.875em;
+	font-weight: 200;
+}
+.active{
+	color: #999999;
+	font-size: 0.875em;
+}
+
+/*----------BREAD CRUMB-------------*/
+
+/*----------GALLERY-------------*/
+
+.product-image{
+	width:50%;
+	float: left;
+
+}	
+
+#imgGaleria {
+border-radius: 5px;  /* Borde de la imagen */
+width: 100%; /* Ancho de la imagen */
+}
+
+/*--------MINIATURE-----------*/
+.miniatura {
+width:  20%;  /* Ancho de las miniaturas */
+cursor: pointer;
+margin: 10px 17px 0 0;
+border-radius: 5px;  /* Borde de la imagen */
+
+}
+
+.miniatura:hover , .miniatura:active{
+opacity:.8;   /* Opacidad */
+-moz-opacity:.8;
+-khtml-opacity:.8;
+filter:alpha(opacity=80);
+}
+
+.miniatura:active {
+opacity:.8;
+-moz-opacity:.8;
+-khtml-opacity:.8;
+filter:alpha(opacity=80);
+}
+
+/*--------MINIATURE-----------*/
+
+/*----------GALLERY-------------*/
+
+
+/*----------PRODUCT DETAIL-------------*/
+
+.product-detail{
+	width: 50%;
+	float: left;
+	text-align: center;
+	padding-left: 100px;
+	box-sizing: border-box;
+	margin-top: 10%;
+}
+
+.product-detail h1{
+	font-size: 2.25em;
+	color:#333333;
+	line-height: 1.5em;
+}
+
+.product-detail p, h2{
+	color: #999999;
+}
+
+.product-detail h2{
+	font-size: 1.125em;
+	margin: 20px 0;
+}
+
+span.sale {
+	color:red;
+	font-weight: bold;
+	font-size: 1.875em;
+}
+
+span.price{
+	text-decoration: line-through;
+}
+
+.product-detail p{
+	line-height: 1.8125em;
+	margin: 20px 0;
+}
+
+span.property {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+span.selected-option{
+	font-size: 1.125em;
+	color: #999999;
+}
+/*---------COLOUR SELECTOR-----------*/
+
+.circle {
+	display: inline-block;
+	border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    margin: 1%;
+}
+
+.purple{
+	background-color: #4f41a0;
+}
+
+.purple input[type='radio']:after {
+    background-color: #4f41a0;
+}
+
+.orange{
+	background-color: #ff8b5e;
+}
+
+.orange input[type='radio']:after {
+    background-color: #ff8b5e;
+}
+
+.pink{
+	background-color: #ff2b99;
+}
+
+.pink input[type='radio']:after {
+    background-color: #ff2b99;
+}
+
+.teal{
+	background-color: #59f9ff;
+}
+
+.teal input[type='radio']:after {
+    background-color: #59f9ff;
+}
+
+input[type='radio']:after {
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    top: 4px;
+    left: -4px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+}
+
+input[type='radio']:checked:after {
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+    top: 2px;
+    left: -6px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+
+}
+/*---------COLOUR SELECTOR-----------*/
+
+/*-----------INPUT FORM-------------*/
+
+label.quantity{
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+input.quantity{
+	text-align: center;
+	border-color: black;
+	padding: 8px 0px;
+    margin: 10px 10px;
+    border-radius: 4px;
+	font-size: 1.25em;
+}
+
+.boton {
+	background-color: #8bd91b;
+	color: white; 
+	font-size: 0.75em;
+	padding: 10px 10px;
+	border: none;
+	border-radius: 4px;
+	margin:10px 10px;
+}
+
+.button {
+	background: rgba(76,76,76,1);
+	background: -moz-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,1)), color-stop(12%, rgba(89,89,89,1)), color-stop(25%, rgba(102,102,102,1)), color-stop(39%, rgba(71,71,71,1)), color-stop(50%, rgba(44,44,44,1)), color-stop(51%, rgba(0,0,0,1)), color-stop(60%, rgba(17,17,17,1)), color-stop(76%, rgba(43,43,43,1)), color-stop(91%, rgba(28,28,28,1)), color-stop(100%, rgba(19,19,19,1)));
+	background: -webkit-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: -o-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: -ms-linear-gradient(top, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	background: linear-gradient(to bottom, rgba(76,76,76,1) 0%, rgba(89,89,89,1) 12%, rgba(102,102,102,1) 25%, rgba(71,71,71,1) 39%, rgba(44,44,44,1) 50%, rgba(0,0,0,1) 51%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+	color: white; 
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	margin:10px 10px;
+}
+/*-----------INPUT FORM-------------*/
+
+/*----------PRODUCT DETAIL-------------*/
+
+/*------------BODY CONTENT-----------------*/
+
+
+/*-----------FOOTER PROMO-------------*/
+
+#footer{
+	background: url(../img/promoimage.jpg) no-repeat center center; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+.promo h3{
+	text-shadow: -2px 2px 6px black;
+	font-weight: bolder;
+	padding: 10% 0;
+    margin: auto;
+    color: white;
+    font-size: 3.75em;
+    text-align: center;
+}
+
+
+/*-----------FOOTER PROMO-------------*/
+
+
+
+/*-----------MEDIA QUERIES-------------*/
+
+
+@media screen and (max-width: 1280px) {
+
+	body{
+		font-size: 14px;
+	}
+	.nav {
+    padding-top: 42px;
+	}
+}
+
+@media screen and (max-width: 1024px){
+	
+	.product-image{
+		width:100%;
+		float: initial;
+	}
+	.product-detail{
+		width: 100%;
+		float: initial;
+		padding-left: 0;
+		margin-top: 10%;
+	}
+	.promo h3 {
+	    font-size: 2.175em;
+	}
+}	
+
+@media only screen and (max-width: 980px) {
+
+	.nav-list li {
+    display: block;
+	}
+
+	.icons-list{
+		display:none;
+	}
+
+	.nav {
+		padding-top: 0;
+	}
+ 
+    /* mostramos #nav-mobile */
+    #nav-mobile{ display: block; }
+ 
+    /* Fijamos nuestro nav en 100% ancho y dejamos de flotarlo */
+    #menu{
+        width: 100%;
+    }
+ 
+    /* Convertimos nuestra lista de enlaces en un menú horizontal */
+    #menu ul{
+        box-shadow: 0 1px 2px rgba(0,0,0,.5);
+        max-height: 0;
+        overflow: hidden;
+    }
+    /* estilos para los LI del menu */
+    #menu li{
+        background: #33363b;
+        border-bottom: 1px solid #282b30;
+        float: none;
+        padding: 5px 0;
+   		font-size: 16px;
+    }
+    /* Quitamos el borde del ultimo item del menú */
+    #menu li:last-child{ border-bottom: 0;}
+ 
+    #menu li a{
+        padding: 15px 0;
+        height: auto;
+        line-height: normal;
+    }
+ 
+    /* Agregamos una animación al despligue del menú */
+    #menu ul.open-menu{
+        max-height: 400px;
+        transition: max-height .4s;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+	body{
+		font-size: 12px;
+	}
+}
+
+
+
+/*-----------MEDIA QUERIES-------------*/
